@@ -11,13 +11,17 @@ import UIKit
 class ViewController3: UIViewController {
     
     @IBOutlet weak var myAgeLabel: UILabel!
+    @IBOutlet weak var myNameLabel: UILabel!
+    
     var age = "18"
+    var name2 = "test"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         myAgeLabel.text = age
+        myNameLabel.text = name2
     }
 
 }

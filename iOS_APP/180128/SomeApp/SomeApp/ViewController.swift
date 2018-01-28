@@ -29,6 +29,7 @@ class ViewController: UIViewController {
                 case "My Segue2":
                     if let vc = segue.destination as? ViewController3{
                         vc.age = userAgeInputTxt.text!
+                        vc.name2 = userNameInputTxt.text!
                 }
                 default: break;
             }
