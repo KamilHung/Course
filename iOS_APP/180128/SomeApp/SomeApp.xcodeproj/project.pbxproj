@@ -13,6 +13,7 @@
 		03EDAFCC201D78A500EF092C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EDAFCB201D78A500EF092C /* Assets.xcassets */; };
 		03EDAFCF201D78A500EF092C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EDAFCD201D78A500EF092C /* LaunchScreen.storyboard */; };
 		03EDAFD9201D809700EF092C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDAFD8201D809700EF092C /* ViewController2.swift */; };
+		03EDAFDB201D97EE00EF092C /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDAFDA201D97EE00EF092C /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		03EDAFCE201D78A500EF092C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03EDAFD0201D78A500EF092C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03EDAFD8201D809700EF092C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		03EDAFDA201D97EE00EF092C /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				03EDAFCD201D78A500EF092C /* LaunchScreen.storyboard */,
 				03EDAFD0201D78A500EF092C /* Info.plist */,
 				03EDAFD8201D809700EF092C /* ViewController2.swift */,
+				03EDAFDA201D97EE00EF092C /* ViewController3.swift */,
 			);
 			path = SomeApp;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				03EDAFC7201D78A500EF092C /* ViewController.swift in Sources */,
 				03EDAFC5201D78A500EF092C /* AppDelegate.swift in Sources */,
+				03EDAFDB201D97EE00EF092C /* ViewController3.swift in Sources */,
 				03EDAFD9201D809700EF092C /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

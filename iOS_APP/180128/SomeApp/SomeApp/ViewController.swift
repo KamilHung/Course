@@ -11,10 +11,27 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var userNameInputTxt: UITextField!
+    @IBOutlet weak var userAgeInputTxt: UITextField!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewController2 {
+        //Single segue
+        /*if let vc = segue.destination as? ViewController2 {
             vc.name = userNameInputTxt.text!
+        }*/
+        
+        //Multi segue PPT page7
+        if let identifer = segue.identifier {
+            switch identifer {
+                case "My Segue": //Segue identifier
+                    if let vc = segue.destination as? ViewController2{
+                        vc.name = userNameInputTxt.text!
+                }
+                case "My Segue2":
+                    if let vc = segue.destination as? ViewController3{
+                        vc.age = userAgeInputTxt.text!
+                }
+                default: break;
+            }
         }
     }
 }
