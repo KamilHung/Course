@@ -12,8 +12,10 @@ class MainMenuVC: UIViewController {
 
     @IBOutlet weak var labelToBeChanged: UILabel!
     
+    var listOfNames = ["test"]
     
     @IBAction func changeLabel(_ sender: UIButton) {
+        
         let alert = UIAlertController(
             title: "Hello",
             message: "How are you?",
@@ -34,8 +36,21 @@ class MainMenuVC: UIViewController {
             (AlertAction) in self.labelToBeChanged.text = AlertAction.title
         }
         
+        /*let actionText = UIAlertAction(
+            title: "Text",
+            style: .default
+        ){
+            (AlertAction) in
+            let textField = alert.textFields?.first
+            self.labelToBeChanged.text = textField!.text
+        }
+        
+        alert.addTextField { (TextField) in
+        }*/
+        
         alert.addAction(actionHappy)
         alert.addAction(actionSad)
+        //alert.addAction(actionText)
         
         present(alert, animated: true, completion: nil)
     }
