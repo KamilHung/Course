@@ -13,17 +13,40 @@
         <!--Main Menu VC-->
         <scene sceneID="b5F-3r-fjB">
             <objects>
-                <viewController id="YYN-w7-Zdv" sceneMemberID="viewController">
+                <viewController id="YYN-w7-Zdv" customClass="MainMenuVC" customModule="TableViewDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQa-FT-xNo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-FV-8Uc">
-                                <rect key="frame" x="174" y="276" width="46" height="30"/>
+                                <rect key="frame" x="114" y="280" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Table View Controller"/>
                                 <connections>
                                     <segue destination="cya-k4-mMH" kind="show" id="PAi-Qc-MXh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c11-fX-HAZ">
+                                <rect key="frame" x="114" y="616" width="146" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df2-bH-FwU">
+                                <rect key="frame" x="107" y="318" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Temperature Converter"/>
+                                <connections>
+                                    <segue destination="iai-9a-peV" kind="show" id="xuR-mX-iFu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu5-bH-aPl">
+                                <rect key="frame" x="148" y="578" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert Demo"/>
+                                <connections>
+                                    <action selector="changeLabel:" destination="YYN-w7-Zdv" eventType="touchUpInside" id="QeZ-fl-dFS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,6 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="eGV-Wl-DdQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu VC" id="V82-vi-v8K"/>
+                    <connections>
+                        <outlet property="labelToBeChanged" destination="c11-fX-HAZ" id="rJr-vq-2ac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlU-ep-XeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="My Cell" textLabel="1Eb-Em-QpW" detailTextLabel="deA-3x-U3m" rowHeight="122" style="IBUITableViewCellStyleSubtitle" id="nr8-ha-7CS" customClass="MyTableViewCell" customModule="TableViewDemo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="My Cell" textLabel="1Eb-Em-QpW" rowHeight="122" style="IBUITableViewCellStyleDefault" id="nr8-ha-7CS" customClass="MyTableViewCell" customModule="TableViewDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nr8-ha-7CS" id="4Fq-lx-Fmm" customClass="MyTableViewCell" customModule="TableViewDemo" customModuleProvider="target">
@@ -53,16 +79,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Eb-Em-QpW">
-                                            <rect key="frame" x="16" y="41" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="121.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="deA-3x-U3m">
-                                            <rect key="frame" x="16" y="64.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -105,6 +124,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-Pz-evh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="445.60000000000002" y="112.89355322338831"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jWh-te-2JE">
+            <objects>
+                <viewController id="iai-9a-peV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9S-AK-dhv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-eO-zOQ">
+                                <rect key="frame" x="98" y="323" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="S2M-bh-SiV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mao-Ty-0sp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aZ6-5Z-XkM">

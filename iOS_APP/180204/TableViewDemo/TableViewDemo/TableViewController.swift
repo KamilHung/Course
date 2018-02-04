@@ -48,11 +48,11 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { //Show to Header
-        return sectionNames[section]
+        return "I am a Header => " + sectionNames[section]
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? { //Show to footer
-        return "I am a footer"
+        return "I am a Footer End => " + sectionNames[section]
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) { //Edit Cell
