@@ -91,7 +91,10 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "My Cell", for: indexPath) as! MyTableViewCell
+        
+        let tagGesture = UITapGestureRecognizer(target: cell, action: #selector(cell.changeBackgroundColor))
+        cell.addGestureRecognizer(tagGesture)
         
         //cell.textLabel!.text = arrayOfData[indexPath.row] //var arrayOfData = [String]()
         let note = arrayOfData[indexPath.row]
@@ -99,6 +102,8 @@ class TableViewController: UITableViewController {
         //let test = note.value(forKey: "name") //used option button check "test" type , it's any?
         return cell
     }
+    
+    
     
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
